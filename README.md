@@ -5,18 +5,32 @@
 ## 安装
 
 ```bash
-# 替换 <你的用户名> 为你的GitHub用户名
-hermes skills tap add github.com/<你的用户名>/hermes-skills
+hermes skills tap add github.com/San-Archer/hermes-skills-Public-
 hermes skills install enterprise-deep-dive-report
 ```
 
 ## 技能列表
 
-### enterprise-deep-dive-report (v4.0.0)
-投行级企业深度研究报告生成器。
+### enterprise-deep-dive-report (v5.3.0)
 
-**功能：** 自动生成八部结构专业投资研究报告
+投行级企业深度研究报告生成器。首发即深度（1,800+行/50+表格），真实财务数据驱动。
 
-**数据源：** Doris DAAS（4.08亿企业）+ 32类MCP API + 上市公司对标
+**核心能力：**
+- 7篇37章统一结构，Web搜索+Doris DAAS+可比交易法强制标配
+- 真实财务数据（Doris `tb_annual_report_2` 企业税务申报数据，含营收/净利/资产/负债/员工）
+- 每表必配100-300字深度分析段落，全报告≥30处分析+≥15处关键发现
+- 多源数据交叉验证推演（中标×招聘×财务×社保）
+- 上市公司对标分析（三表+比率+估值）
+
+**数据源：** Doris DAAS（4.08亿企业）+ 32类MCP API + 上市公司对标 + Web搜索
 
 **触发词：** 企业分析报告、投行报告、企业尽调、深度研究报告、投资研究报告
+
+**质量标杆：** 凌度智能报告（2,053行/51章），中科江南报告（1,800+行/42章）
+
+**版本历史：**
+- v5.3.0: 中科江南v5.1质量验证通过，增强深度门禁（行数≥1800/表≥50/分析≥30/发现≥15）
+- v5.2.0: 增强章节统一连续数字编号，表格内置"解读"列+合计行
+- v5.1.0: 每表必配分析段落（100-300字），关键发现callout≥15处
+- v5.0.0: 真实财务数据驱动（Doris tb_annual_report_2），废除"先薄后厚"
+- v4.0.0: 首发版本
